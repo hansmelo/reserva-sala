@@ -31,7 +31,7 @@ gem 'bootstrap-sass', '~> 3.3.3'
 gem 'devise'
 
 group :production do
-  gem 'rails_12factor'
+  gem 'rails_12factor', '0.0.2'
 end
 
 group :development do
