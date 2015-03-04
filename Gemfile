@@ -30,6 +30,8 @@ gem 'bootstrap-sass', '~> 3.3.3'
 
 gem 'devise'
 
+gem 'rails_12factor'
+
 group :development do
   gem 'rails_layout'
 end
