@@ -1,0 +1,22 @@
+<h1>Reserva de Sala</h1>
+
+<table class="table table-striped scheduler">
+  <thead>
+    <th>Horários</th>
+    <% work_days.each do |week_day, day| %>
+      <%= content_tag :th,
+       content_tag(:div, week_day) %>
+    <% end %>
+  </thead>
+
+  <tbody>
+    <% work_hours.each do |hour| %>
+      <tr>
+        <%= content_tag :td, "%02d:00" % hour %>
+        <% work_days.each do |week_day, day| %>
+           <%= @calendar.row_table_calendar(week_day, day, hour, current_user)%>  
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

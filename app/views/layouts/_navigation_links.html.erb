@@ -1,0 +1,7 @@
+<% if current_user %>
+	<div style="color:white">
+		Bem Vindo <%= current_user.email %>!
+		|
+		<%= link_to "Sair", destroy_user_session_path, method: :delete %>
+	</div>  
+<% end %>
