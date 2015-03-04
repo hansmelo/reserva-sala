@@ -17,6 +17,7 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  host:     localhost
   username: postgres
   password: postgres
   # For details on connection pooling, see rails configuration guide
@@ -81,7 +82,7 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: reserva-sala_production
-  username: reserva-sala
-  password: <%= ENV['RESERVA-SALA_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  database: reserva-sala
+  pool: 5
+  timeout: 5000
